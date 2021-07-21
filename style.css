@@ -1,3 +1,7 @@
-.customer-card{
-    background-color: deepskyblue;
+body {
+    background-color: black;
+}
+
+.customer-card {
+    background-color: bisque;
 }
