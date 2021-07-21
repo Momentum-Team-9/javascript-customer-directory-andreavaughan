@@ -1,5 +1,3 @@
-console.log(customers)
-
 const outputDiv = document.getElementById('root')
 
 populateCustomerCard(customers);
@@ -15,10 +13,11 @@ function populateCustomerCard(customers){
             //output picture 
             const customerPic = document.createElement('img')
             customerPic.src = customers[i].picture.large
+            customerPic.classList.add('round-img')
             customerCard.appendChild(customerPic)
 
             //get first and last name for each customer
-            const fullNameHeader = document.createElement('h1')
+            const fullNameHeader = document.createElement('h2')
             const fullName = customers[i].name.first + ' ' + customers[i].name.last
 
             //reformat first and last name to capitalize first letters 
@@ -27,7 +26,6 @@ function populateCustomerCard(customers){
             for (let i = 0; i < words.length; i++) {
                 words[i] = words[i][0].toUpperCase() + words[i].substr(1)
             }
-            words.join(' ')
             fullNameHeader.innerText = words.join(' ')
             customerCard.appendChild(fullNameHeader)
 

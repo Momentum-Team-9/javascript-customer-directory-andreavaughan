@@ -1,7 +1,52 @@
 body {
-    background-color: black;
+    font-family: 'Inter', sans-serif;
+}
+
+h1{
+    padding: 20px;
+}
+
+.customers {
+    display: flex;
+    flex-flow: row wrap; 
+    flex: 1 1 auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.round-img {
+    width: 100%;
+    height: auto;
+    border-radius: 40% 60% 40% 60%;
+    background: #ffffff;
 }
 
 .customer-card {
-    background-color: bisque;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 10px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+a:link {
+    color: #7A7A7A;
+}
+
+a:visited {
+    color: #484848;
+}
+
+a:hover {
+    color: #000000;
+}
+
+a:active {
+    color: #939393;
+}
+
+address {
+    font-style: normal;
+    font-weight: 500;
 }
