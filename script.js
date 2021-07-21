@@ -8,7 +8,7 @@ const outputDiv = document.getElementById('root')
 
 
 
-
+populateCustomerCard(customers);
 
 //test array object 
 
@@ -18,11 +18,10 @@ const outputDiv = document.getElementById('root')
 
 function populateCustomerCard(customers){
     for (i = 0; i < customers.length; i++){
-        if (customers[i]){
+        if (customers[i] !== undefined){
             const customerCard = document.createElement('div')
             customerCard.classList.add('customer-card')
-
-
+            outputDiv.appendChild(customerCard)
 //output picture 
             const customerPic = document.createElement('img')
             customerPic.src = customers[i].picture.large
@@ -61,7 +60,6 @@ function populateCustomerCard(customers){
             customerSince.innerText = customers[i].registered.date
             customerCard.appendChild(customerSince)
 
-            outputDiv.appendChild(customerCard)
         }
     }
 }
