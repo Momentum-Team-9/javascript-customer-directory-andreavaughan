@@ -2,15 +2,7 @@ console.log(customers)
 
 const outputDiv = document.getElementById('root')
 
-// const customerCard = document.createElement('div')
-// customerCard.classList.add('customer-card')
-// customerCard.setAttribute('class', 'customer-card')
-
-
-
 populateCustomerCard(customers);
-
-
 
 function populateCustomerCard(customers){
     for (i = 0; i < customers.length; i++){
@@ -46,11 +38,11 @@ function populateCustomerCard(customers){
             customerCard.appendChild(customerAddress2)
 
             const customerBirthday = document.createElement('div')
-            customerBirthday.innerText = 'DOB: ' + customers[i].dob.date
+            customerBirthday.innerText = 'DOB: ' + moment(customers[i].dob.date).format("MMM Do, YYYY");
             customerCard.appendChild(customerBirthday)
 
             const customerSince = document.createElement('div')
-            customerSince.innerText = 'Customer since: ' + customers[i].registered.date
+            customerSince.innerText = 'Customer since: ' + moment(customers[i].registered.date).format("MMM Do, YYYY");
             customerCard.appendChild(customerSince)
 
         }
